@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class SumTwoNumbersTests {
 
@@ -22,9 +23,18 @@ public class SumTwoNumbersTests {
     Integer result = SumTwoNumbers.sum(null, 2);
     assertNotNull(result, "The result cannot be null");
     assertEquals(2, result);
-
-    Integer anotherResult = SumTwoNumbers.sum(2, null);
-    assertNotNull(anotherResult, "The result cannot be null");
-    assertEquals(2, anotherResult);
+  }
+  @Test
+  @DisplayName("Test when null values are sent")
+  public void testNullValues1() {
+    Integer result = SumTwoNumbers.sum(2, null);
+    assertNotNull(result, "The result cannot be null");
+    assertEquals(2, result);
+  }
+  @Test
+  @DisplayName("Test when null values are sent")
+  public void testNullValues3() {
+    Integer result = SumTwoNumbers.sum(null, null);
+    assertNull(result, "The result is null because both numbers are null");
   }
 }

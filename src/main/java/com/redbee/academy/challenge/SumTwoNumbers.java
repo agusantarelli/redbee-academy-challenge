@@ -11,7 +11,19 @@ public class SumTwoNumbers {
    * @return The result of a + b
    */
   public static Integer sum(Integer a, Integer b) {
-    //TODO: Implement me
-    return null;
+    if (a == null & b == null) {
+      System.out.println("Both numbers are null");
+      return null;
+    } else if (a == null) {
+      System.out.println("The first number is null");
+      return b;
+    } else if(b == null){
+      System.out.println("The second number is null");
+      return a;
+    } else {
+      int sum;
+      sum = a + b;
+      return sum;
+    }
   }
 }

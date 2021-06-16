@@ -12,7 +12,13 @@ public class SumArrayNumbers {
    * @return The result of 1 + 2 + 3
    */
   public static Integer sum(List<Integer> array) {
-    //TODO: Implement me
-    return null;
+    int sum = 0;
+    if (array.isEmpty()) {
+      return sum;
+    }
+    for (int i = 0; i < array.size(); i++){
+      sum += array.get(i);
+    }
+    return sum;
   }
 }
