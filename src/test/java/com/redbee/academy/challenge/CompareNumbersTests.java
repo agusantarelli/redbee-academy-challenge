@@ -91,14 +91,14 @@ public class CompareNumbersTests {
   @Test
   @DisplayName("Test when null values are sent")
   public void testNullEqualValue1() {
-    Integer result = CompareNumbers.max(4, null, 5);
+    Integer result = CompareNumbers.max(4, null, 4);
     assertNotNull(result, "The result cannot be null");
-    assertEquals(5, result);
+    assertEquals(4, result);
   }
   @Test
   @DisplayName("Test when null values are sent")
   public void testNullEqualValue2() {
-    Integer result = CompareNumbers.max(-10, 0, null);
+    Integer result = CompareNumbers.max(0, 0, null);
     assertNotNull(result, "The result cannot be null");
     assertEquals(0, result);
   }
